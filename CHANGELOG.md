@@ -25,6 +25,7 @@
 
 - Report OpenSandbox cleanup failures instead of silently succeeding, preserve the original command exit when cleanup also fails, and finalize timing/session results after cleanup without weakening reuse admission or absolute TTL checks. [PR 1804](https://github.com/openclaw/crabbox/pull/1804). Thanks @steipete.
 - Added a credential-isolated AWS image-qualification transport and non-public per-run authority with fixed sandbox policy, bounded intent reconciliation, verified resource ownership, and eventual-consistency-aware teardown, without changing normal AWS credential behavior. [PR 1778](https://github.com/openclaw/crabbox/pull/1778). Thanks @vincentkoc.
+- Restored the previous scoped AWS image default when post-promotion smoke fails, using compare-and-swap revisions so concurrent newer promotions are never overwritten. [PR 1756](https://github.com/openclaw/crabbox/pull/1756).
 
 ## 0.49.0 - 2026-09-03
 
